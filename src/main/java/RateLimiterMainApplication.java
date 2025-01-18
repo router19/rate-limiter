@@ -3,9 +3,9 @@ import java.util.concurrent.TimeUnit;
 public class RateLimiterMainApplication {
     private static  final int MAX_TOKEN = 5;
     public static void main(String[] args) throws InterruptedException{
-        //refill rate 1 token per sec
+        //refill rate 3 token per sec
 
-        //means rate limiting 1 request per second
+        //means rate limiting 3 request per second
         RateLimiter rateLimiter = new RateLimiter(MAX_TOKEN, TimeUnit.SECONDS.toNanos(1),3);
         String clientId = "client1";
         for(int requestNumber =0; requestNumber < 13; requestNumber++){
